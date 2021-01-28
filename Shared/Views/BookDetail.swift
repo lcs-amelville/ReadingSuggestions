@@ -24,7 +24,7 @@ struct BookDetail: View {
 struct BookDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            BookDetail(book: testData[1])
+            BookDetail(book: testData[0])
         }
     }
 }
