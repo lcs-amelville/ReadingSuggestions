@@ -16,17 +16,17 @@ struct BookDetail: View {
             Image(book.imageName)
                 .resizable()
                 .scaledToFit()
-            
-            Spacer()
+                .padding(.bottom)
+         
             
         VStack {
+            
+       
             
             Text(" This book has a \(book.rating) out of 5 rating")
                 .multilineTextAlignment(.leading)
                 .font(.title)
                 .padding(.bottom)
-            
-            Spacer()
             
             Text(book.description)
                 .font(.subheadline)
