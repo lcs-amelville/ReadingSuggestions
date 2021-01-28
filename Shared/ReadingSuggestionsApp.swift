@@ -11,7 +11,24 @@ import SwiftUI
 struct ReadingSuggestionsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+                
+                TabView {
+                    
+                    NavigationView {
+                        ContentView()
+                    }
+                    .tabItem {
+                        Image(systemName: "list.bullet")
+                        Text("Books")
+                        
+                    }
+                    .tabItem {
+                        Image(systemName: "")
+                        Text("Favorite Books")
+                        
+                    }
+            
+                }
         }
     }
 }
