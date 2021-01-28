@@ -12,12 +12,30 @@ struct BookDetail: View {
     var book: Book
     
     var body: some View {
+        ScrollView {
+            Image(book.imageName)
+                .resizable()
+                .scaledToFit()
+            
+            Spacer()
+            
         VStack {
             
-            Image(book.imageName)
+            Text(" This book has a \(book.rating) out of 5 rating")
+                .multilineTextAlignment(.leading)
+                .font(.title)
+                .padding(.bottom)
             
-        }
+            Spacer()
+            
+            Text(book.description)
+                .font(.subheadline)
+                .multilineTextAlignment(.leading)
+                .padding(.bottom)
+            
+            }
         .navigationTitle(book.title)
+        }
     }
 }
 

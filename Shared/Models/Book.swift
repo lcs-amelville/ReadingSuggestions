@@ -17,7 +17,12 @@ struct Book:  Decodable, Identifiable {
 }
 
 let testData = [
-    Book (title: "Test",rating: 0,description: "", id: 1, imageName: "Test"),
+    Book (title: "Test",
+          rating: 0,
+          description: "This is an intresting book with a fast pace exciting plot line. It's full of plot twists but unfortunaly ends with a dreadful cliff hanger.",
+          id: 1,
+          imageName: "Test"),
+    
     Book (title: "",rating: 0,description: "", id: 2, imageName: ""),
     Book (title: "",rating: 0,description: "", id: 3, imageName: ""),
     Book (title: "",rating: 0,description: "", id: 4, imageName: ""),
