@@ -16,5 +16,5 @@ class BookStore: ObservableObject {
     }
 }
 
-let testStore = BookStore(books: testData) // Wait what's this for?
+let testStore = BookStore(books: testData)
 
