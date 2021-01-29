@@ -9,13 +9,16 @@ import SwiftUI
 
 @main
 struct ReadingSuggestionsApp: App {
+    
+    @StateObject var store = BookStore()
+    
     var body: some Scene {
         WindowGroup {
                 
                 TabView {
                     
                     NavigationView {
-                        ContentView()
+                        BookView(book: store)
                     }
                     .tabItem {
                         Image(systemName: "list.bullet")

@@ -9,11 +9,23 @@ import SwiftUI
 
 
 struct BookView: View {
+    
+    @ObservedObject var book: BookStore
+    
     var body: some View {
-        Image("")
-//        List  { book in (.book)
-//
-//        }
+        
+        List(book.books) { book in
+            
+            // create a navigation link leading to the detail view
+            NavigationLink(destination: BookDetail(book: book)) {
+                
+                
+                
+                
+            }
+            
+        }
+
    }
         
 }
@@ -21,7 +33,9 @@ struct BookView: View {
 
 struct BookView_Previews: PreviewProvider {
     static var previews: some View {
-        BookView()
+        NavigationView {
+        BookView(book: testStore)
         }
     }
+}
 
