@@ -14,22 +14,12 @@ struct BookView: View {
     
     var body: some View {
         
-        List(book.books) { book in
+        List {
+            ForEach (book.books)  { book in
+                BookCell(book: book)
+        }
             
-            // create a navigation link leading to the detail view
-            NavigationLink(destination: BookDetail(book: book)) {
-       
-                
-                Image(book.imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 44, height: 44)
-                
-                Text(book.title)
-                    font(.headline)
-                
-                
-            }
+            
             
         }
         .navigationTitle("Books")
@@ -44,5 +34,25 @@ struct BookView_Previews: PreviewProvider {
         BookView(book: testStore)
         }
     }
+    
 }
+
+
+struct BookCell: View {
+    var book: Book
+    var body: some View {
+        // create a navigation link leading to the detail view
+        NavigationLink(destination: BookDetail(book: book)) {
+            Image(book.imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 44, height: 44)
+            
+            Text(book.title)
+                font(.headline)
+        }
+    }
+}
+
+
 
