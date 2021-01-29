@@ -18,14 +18,21 @@ struct BookView: View {
             
             // create a navigation link leading to the detail view
             NavigationLink(destination: BookDetail(book: book)) {
+       
                 
+                Image(book.imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 44, height: 44)
                 
+                Text(book.title)
+                    font(.headline)
                 
                 
             }
             
         }
-
+        .navigationTitle("Books")
    }
         
 }
