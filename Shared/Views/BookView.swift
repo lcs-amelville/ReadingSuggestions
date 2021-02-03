@@ -10,28 +10,26 @@ import SwiftUI
 
 struct BookView: View {
     
-    @ObservedObject var book: BookStore
+    @ObservedObject var store: BookStore
     
     var body: some View {
         
-        List {
-            ForEach (book.books)  { book in
+        List(store.books)  { book in
                 BookCell(book: book)
-        }
             
             
             
         }
         .navigationTitle("Books")
-   }
-        
+    }
+    
 }
 
 
 struct BookView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        BookView(book: testStore)
+            BookView(store: testStore)
         }
     }
     
@@ -49,7 +47,7 @@ struct BookCell: View {
                 .frame(width: 44, height: 44)
             
             Text(book.title)
-                font(.headline)
+            font(.headline)
         }
     }
 }

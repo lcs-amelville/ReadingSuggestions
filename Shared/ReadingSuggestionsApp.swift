@@ -18,12 +18,16 @@ struct ReadingSuggestionsApp: App {
                 TabView {
                     
                     NavigationView {
-                        BookView(book: store)
+                        BookView(store: store)
                     }
                     .tabItem {
                         Image(systemName: "list.bullet")
                         Text("Books")
                         
+                    }
+                    
+                    NavigationView {
+                        Text("Helo World")
                     }
                     .tabItem {
                         Image(systemName: "")
