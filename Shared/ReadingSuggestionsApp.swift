@@ -30,7 +30,7 @@ struct ReadingSuggestionsApp: App {
                         Text("Helo World")
                     }
                     .tabItem {
-                        Image(systemName: "")
+                        Image(systemName: "heart.circle.fill")
                         Text("Favorite Books")
                         
                     }
