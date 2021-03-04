@@ -13,19 +13,14 @@ struct BookView: View {
     @ObservedObject var store: BookStore
     
     var body: some View {
+    
         
-        
-        Text("Hello World")
-        
-        List(store.books)  { book in
-                BookCell(book: book)
+        List (store.books) { book in
+            BookDetail(book: book)
             
-//            HStack {
-//                Spacer()
-//                Text("\(store.books.count) Sandwiches")
-//                foregroundColor(.secondary)
-//                Spacer()
-//            }
+//            ForEach (store.books) { book in
+//        BookCell(book: book)
+            
         }
         .navigationTitle("Books")
     }
@@ -43,22 +38,7 @@ struct BookView_Previews: PreviewProvider {
 }
 
 
-struct BookCell: View {
-    var book: Book
-    var body: some View {
-        // create a navigation link leading to the detail view
-        NavigationLink(destination: BookDetail(book: book)) {
-        
-            Image(book.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 44, height: 44)
-            
-            Text(book.title)
-            font(.headline)
-        }
-    }
-}
+
 
 
 

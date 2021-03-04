@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ReadingSuggestionsApp: App {
     
-    @StateObject private var store = BookStore(books: testData)
+    @StateObject private var store = BookStore()
     
     var body: some Scene {
         WindowGroup {

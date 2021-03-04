@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Book: Identifiable {
+class Book: Identifiable, ObservableObject {
 
     var id = UUID()
     var title: String
@@ -26,10 +26,6 @@ class Book: Identifiable {
 }
 
 let testData = [
-    Book (title: "Test",
-          rating: 4.0,
-          description: "This is an intresting book with a fast pace exciting plot line. It's full of plot twists but unfortunaly ends with a dreadful cliff hanger.",
-          imageName: "Test"),
     
     Book (title: "A Court of Thorns and Roses",
           rating: 5.0,
