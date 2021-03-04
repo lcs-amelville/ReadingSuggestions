@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ReadingSuggestionsApp: App {
     
-    @StateObject var store = BookStore()
+    @StateObject private var store = BookStore(books: testData)
     
     var body: some Scene {
         WindowGroup {
@@ -27,7 +27,7 @@ struct ReadingSuggestionsApp: App {
                     }
                     
                     NavigationView {
-                        Text("Helo World")
+                        Text("Hello World")
                     }
                     .tabItem {
                         Image(systemName: "heart.circle.fill")

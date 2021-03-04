@@ -14,6 +14,9 @@ struct BookView: View {
     
     var body: some View {
         
+        
+        Text("Hello World")
+        
         List(store.books)  { book in
                 BookCell(book: book)
             
