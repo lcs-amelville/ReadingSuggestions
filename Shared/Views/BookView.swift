@@ -13,13 +13,9 @@ struct BookView: View {
     @ObservedObject var store: BookStore
     
     var body: some View {
-    
         
-        List (store.books) { book in
-            BookDetail(book: book)
-            
-//            ForEach (store.books) { book in
-//        BookCell(book: book)
+        List (store.lists) { list in
+            BookCell(list: list)
             
         }
         .navigationTitle("Books")
