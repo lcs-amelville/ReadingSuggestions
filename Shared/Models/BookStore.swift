@@ -16,6 +16,17 @@ class BookStore: ObservableObject {
     }
 }
 
+
 let testStore = BookStore(books: testData)
+
+class PreviewStore: ObservableObject {
+    @Published var chapters: [Book]
+    
+    init (chapters: [Book] = []) {
+        self.chapters = chapters
+        
+    }
+}
+
 
 let testPreview = BookStore(books: testChapter)
