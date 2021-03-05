@@ -27,11 +27,11 @@ struct ReadingSuggestionsApp: App {
                     }
                     
                     NavigationView {
-                        Text("Hello World")
+                        Preview(store: store)
                     }
                     .tabItem {
                         Image(systemName: "heart.circle.fill")
-                        Text("Favorite Books")
+                        Text("Books Preview")
                         
                     }
             

@@ -14,10 +14,10 @@ struct BookView: View {
     
     var body: some View {
         
-        List (store.lists) { list in
-            BookCell(list: list)
-            
+        List (store.books) { book in
+                    BookCell(book: book)
         }
+        
         .navigationTitle("Books")
     }
     
@@ -35,6 +35,23 @@ struct BookView_Previews: PreviewProvider {
 
 
 
+struct BookCell: View {
+    
+    
+    var book: Book
+    var body: some View {
+        
+        NavigationLink(destination: BookDetail(book: book))
+        {
+                    Image(book.imageName)
+                    .resizable()
+                    .scaledToFit()
+                        
+                    
+                    Text(book.title)
+                    font(.headline)
+        }
 
-
+    }
+}
 

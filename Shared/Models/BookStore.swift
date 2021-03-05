@@ -18,3 +18,4 @@ class BookStore: ObservableObject {
 
 let testStore = BookStore(books: testData)
 
+let testPreview = BookStore(books: testChapter)
