@@ -14,15 +14,14 @@ class Book: Identifiable, ObservableObject {
     var rating: Double
     var description: String
     var imageName: String
-    var preview: String
     
-    internal init(id: UUID = UUID(), title: String, rating: Double, description: String, imageName: String, preview: String) {
+    
+    internal init(id: UUID = UUID(), title: String, rating: Double, description: String, imageName: String) {
         self.id = id
         self.title = title
         self.rating = rating
         self.description = description
         self.imageName = imageName
-        self.preview = preview
     }
     
 }
@@ -32,33 +31,29 @@ let testData = [
     Book (title: "A Court of Thorns and Roses",
           rating: 5.0,
           description: "A fast pace romance and action book, incorperating strong characters and challenging emotional choices.",
-          imageName: "aCourtOfThornsAndRoses", preview: ""),
+          imageName: "aCourtOfThornsAndRoses", ),
     
     Book (title: "All The Light You Cannot See",
           rating: 4.0,
           description: "A realistic fiction evolving around a blind girl and her life and german ocuppied territory durring World War 2.",
-          imageName: "allTheLIghtWeCannotSee", preview: ""),
+          imageName: "allTheLIghtWeCannotSee", ),
     
     Book (title: "The Hate U Give",
           rating: 4.5,
           description: "The Hate U Give revolves around the world of a black teenager whos friend was shot infront of her because of his colour. The wild fire of her life after this horrifying event tests her courage and conviction for justice and her very safety.",
-          imageName: "theHateYouGive", preview: ""),
+          imageName: "theHateYouGive",),
     
     Book (title: "Educated",
           rating: 3.5,
           description: "This book, while a good read is very depressing with heavy topics. While an exellent read for a fun books list it is definitly not in the top section of that list.",
-          imageName: "educated", preview: ""),
+          imageName: "educated",),
     
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
+    Book (title: "",rating: 0,description: "", imageName: "",),
+    Book (title: "",rating: 0,description: "", imageName: "",),
+    Book (title: "",rating: 0,description: "", imageName: "",),
+    Book (title: "",rating: 0,description: "", imageName: "",),
 ]
 
 
 
 
-let testChapter = [
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
-    Book (title: "",rating: 0,description: "", imageName: "", preview: ""),
-]

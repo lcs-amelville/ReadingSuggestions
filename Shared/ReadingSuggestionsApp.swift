@@ -28,7 +28,7 @@ struct ReadingSuggestionsApp: App {
                     }
                     
                     NavigationView {
-                        Preview(chapter: chapter)
+                        PreviewView(chapters: chapter)
                     }
                     .tabItem {
                         Image(systemName: "heart.circle.fill")
