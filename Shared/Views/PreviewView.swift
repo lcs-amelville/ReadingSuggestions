@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PreviewView: View {
     
-    @ObservedObject var chapter: chapters
+    @ObservedObject var chapter: Preview
     
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -19,7 +19,7 @@ struct PreviewView: View {
 struct Preview_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            Preview(chapter: testPreview)
+            PreviewView(chapter: testPreview)
         }
     }
 }

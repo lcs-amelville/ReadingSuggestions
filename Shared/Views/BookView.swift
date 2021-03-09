@@ -14,7 +14,7 @@ struct BookView: View {
     
     var body: some View {
         
-        List (store.books) { book in
+        List(store.books) { book in
                     BookCell(book: book)
         }
         
@@ -41,15 +41,16 @@ struct BookCell: View {
     var book: Book
     var body: some View {
         
-        NavigationLink(destination: BookDetail(book: book))
-        {
+        NavigationLink(destination: BookDetail(book: book)) {
+            
+            HStack {
                     Image(book.imageName)
                     .resizable()
                     .scaledToFit()
-                        
                     
                     Text(book.title)
-                    font(.headline)
+                   .font(.headline)
+            }
         }
 
     }
