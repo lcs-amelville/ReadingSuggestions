@@ -7,10 +7,17 @@
 
 import Foundation
 
-struct Chapter: Identifiable {
+class Chapter: Identifiable, ObservableObject {
     var id = UUID()
     var preview: String
+    
+    internal init(id: UUID = UUID(), preview: String) {
+        self.id = id
+        self.preview = preview
+    }
+
 }
+
 
 
 let testChapter = [
