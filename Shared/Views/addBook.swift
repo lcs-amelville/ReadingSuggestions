@@ -25,7 +25,7 @@ struct addBook: View {
                     
                     Spacer()
                     
-//                    Picker("Raselection: ting", sellabelrating) {
+//               Picker("Raselection: ting", sellabelrating) {
 //                        Text(RatingPicker.zero.rawValue).tag(RatingPicker.zero)
 //                        Text(RatingPicker.one.rawValue).tag(RatingPicker.one)
 //                        Text(RatingPicker.two.rawValue).tag(RatingPicker.two)
@@ -37,11 +37,25 @@ struct addBook: View {
                     Spacer()
                     
                     TextField("Description", text: $description)
+                    
+                    
+                }
+            }
+            .navigationTitle("New Reminder")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Save") {
+                        saveTask()
+                    }
                 }
             }
         }
     }
 }
+func saveTask() {
+    
+}
+
 
 struct addBook_Previews: PreviewProvider {
     static var previews: some View {

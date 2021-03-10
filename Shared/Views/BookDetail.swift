@@ -11,6 +11,7 @@ struct BookDetail: View {
     
     @ObservedObject var book: Book
     
+    
     var body: some View {
         ScrollView {
             Image(book.imageName)
@@ -23,7 +24,7 @@ struct BookDetail: View {
             
        
             
-            Text(" This book has a \(book.rating) out of 5 rating")
+            Text(" This book has a \(book.RatingPicker) out of 5 rating")
                 .multilineTextAlignment(.leading)
                 .font(.title)
                 .padding(.bottom)
