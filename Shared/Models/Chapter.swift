@@ -8,11 +8,11 @@
 import Foundation
 
 class Chapter: Identifiable, ObservableObject {
-    var id = UUID()
+    var idi: Int
     var preview: String
     
-    internal init(id: UUID = UUID(), preview: String) {
-        self.id = id
+    internal init(idi: Int, preview: String) {
+        self.idi = idi
         self.preview = preview
     }
 
@@ -21,7 +21,7 @@ class Chapter: Identifiable, ObservableObject {
 
 
 let testChapter = [
-    Chapter (preview: ""),
-    Chapter (preview: ""),
+    Chapter (idi: 1 ,preview: ""),
+    Chapter (idi: 2 ,preview: ""),
 ]
 

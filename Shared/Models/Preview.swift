@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Preview: ObservableObject {
+class PreviewStore: ObservableObject {
     @Published var chapters: [Chapter]
     
     init (chapters: [Chapter] = []) {
@@ -17,4 +17,4 @@ class Preview: ObservableObject {
     }
 }
 
-let testPreview = Preview(chapters: testChapter)
+let testPreview = PreviewStore(chapters: testChapter)

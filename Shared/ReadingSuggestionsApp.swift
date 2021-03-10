@@ -11,7 +11,7 @@ import SwiftUI
 struct ReadingSuggestionsApp: App {
     
     @StateObject private var store = BookStore()
-    @StateObject private var chapter = Preview()
+    @StateObject private var chapter = PreviewStore()
     
     var body: some Scene {
         WindowGroup {
@@ -28,14 +28,22 @@ struct ReadingSuggestionsApp: App {
                     }
                     
                     NavigationView {
-                        PreviewView(chapter: chapter)
+                        PreviewList(store: chapter)
                     }
                     .tabItem {
                         Image(systemName: "heart.circle.fill")
                         Text("Books Preview")
                         
                     }
-            
+                    
+                    NavigationView {
+                        
+                    }
+                    .tabItem {
+                    
+                    }
+                    
+                    
                 }
         }
     }
