@@ -22,7 +22,14 @@ struct addBook: View {
         NavigationView {
             VStack {
                 Form {
+                    
+                    Text("Book Title")
                     TextField("Title", text: $title)
+                    
+                    Spacer()
+                    
+                    Text("Book Descripition")
+                    TextField("Description", text: $description)
                     
                     Spacer()
                     
@@ -41,9 +48,10 @@ struct addBook: View {
                             .tag(RatingPicker.five)
                     }
                     
-                    Spacer()
                     
-                    TextField("Description", text: $description)
+                 
+                    
+                    
                     
                     
                 }
