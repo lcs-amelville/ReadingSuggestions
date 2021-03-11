@@ -27,11 +27,18 @@ struct addBook: View {
                     Spacer()
                     
                     Picker("Rating", selection: $rating) {
-                        Text(RatingPicker.zero)
+                        Text(RatingPicker.zero.rawValue)
                             .tag(RatingPicker.zero)
-                        Text(RatingPicker.one)
+                        Text(RatingPicker.one.rawValue)
                             .tag(RatingPicker.one)
-                        
+                        Text(RatingPicker.two.rawValue)
+                            .tag(RatingPicker.two)
+                        Text(RatingPicker.three.rawValue)
+                            .tag(RatingPicker.three)
+                        Text(RatingPicker.four.rawValue)
+                            .tag(RatingPicker.four)
+                        Text(RatingPicker.five.rawValue)
+                            .tag(RatingPicker.five)
                     }
                     
                     Spacer()
