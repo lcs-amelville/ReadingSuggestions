@@ -18,6 +18,7 @@ struct addBook: View {
         
         
     var body: some View {
+        
         NavigationView {
             VStack {
                 Form {
@@ -25,14 +26,13 @@ struct addBook: View {
                     
                     Spacer()
                     
-//               Picker("Raselection: ting", sellabelrating) {
-//                        Text(RatingPicker.zero.rawValue).tag(RatingPicker.zero)
-//                        Text(RatingPicker.one.rawValue).tag(RatingPicker.one)
-//                        Text(RatingPicker.two.rawValue).tag(RatingPicker.two)
-//                        Text(RatingPicker.three.rawValue).tag(RatingPicker.three)
-//                        Text(RatingPicker.four.rawValue).tag(RatingPicker.four)
-//                        Text(RatingPicker.five.rawValue).tag(RatingPicker.five)
-//                    }
+                    Picker("Rating", selection: $rating) {
+                        Text(RatingPicker.zero)
+                            .tag(RatingPicker.zero)
+                        Text(RatingPicker.one)
+                            .tag(RatingPicker.one)
+                        
+                    }
                     
                     Spacer()
                     
@@ -41,7 +41,7 @@ struct addBook: View {
                     
                 }
             }
-            .navigationTitle("New Reminder")
+            .navigationTitle("Add A Book")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {

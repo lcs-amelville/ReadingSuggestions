@@ -22,9 +22,7 @@ struct BookDetail: View {
             
         VStack {
             
-       
-            
-            Text(" This book has a \(book.RatingPicker) out of 5 rating")
+            Text(" This book has a \(book.rating) out of 5 rating" as String)
                 .multilineTextAlignment(.leading)
                 .font(.title)
                 .padding(.bottom)

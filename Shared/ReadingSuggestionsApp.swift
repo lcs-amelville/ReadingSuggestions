@@ -37,10 +37,11 @@ struct ReadingSuggestionsApp: App {
                     }
                     
                     NavigationView {
-                        
+                        addBook(addStore: store)
                     }
                     .tabItem {
-                    
+                        Image(systemName: "doc.fill.badge.plus")
+                        Text("Add A Book")
                     }
                     
                     
