@@ -16,6 +16,5 @@ class BookStore: ObservableObject {
     }
 }
 
-
 let testStore = BookStore(books: testData)
 

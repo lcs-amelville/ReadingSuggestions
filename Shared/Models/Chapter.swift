@@ -21,7 +21,7 @@ class Chapter: Identifiable, ObservableObject {
 
 
 let testChapter = [
-    Chapter (idi: 1 ,preview: ""),
-    Chapter (idi: 2 ,preview: ""),
+    Chapter (idi: 1, preview: "Chapter 1: The Beginning"),
+    Chapter (idi: 2, preview: "Chapter 2: The Next Part"),
 ]
 

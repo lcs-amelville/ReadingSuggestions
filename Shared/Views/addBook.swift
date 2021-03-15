@@ -15,7 +15,7 @@ struct addBook: View {
     @State private var title = ""
     @State private var rating = RatingPicker.zero
     @State private var description = ""
-        
+    @State private var imageName = ""
         
     var body: some View {
         
@@ -47,12 +47,7 @@ struct addBook: View {
                         Text(RatingPicker.five.rawValue)
                             .tag(RatingPicker.five)
                     }
-                    
-                    
-                 
-                    
-                    
-                    
+          
                     
                 }
             }
@@ -66,14 +61,21 @@ struct addBook: View {
             }
         }
     }
+    func saveTask() {
+        
+        addStore.books.append(Book(title: title,
+                                   rating: rating,
+                                   description: description, imageName: imageName))
+    }
 }
-func saveTask() {
-    
-}
+
 
 
 struct addBook_Previews: PreviewProvider {
     static var previews: some View {
-        addBook(addStore: testStore)
+        NavigationView {
+            addBook(addStore: testStore)
+        }
+
     }
 }

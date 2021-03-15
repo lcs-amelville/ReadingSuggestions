@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class PreviewStore: ObservableObject {
     @Published var chapters: [Chapter]
     

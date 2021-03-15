@@ -9,14 +9,16 @@ import SwiftUI
 
 struct PreviewView: View {
     
-    @ObservedObject var chapter: Chapter
+    
+    @ObservedObject var thisPreview: Chapter
     
     var body: some View {
         
         ScrollView {
             VStack {
-                //Text("Hello, World!")
-                Text(chapter.preview)
+                
+                Text(thisPreview.preview)
+                // The change made a lot of errors. Probally because I played around with the code to make it work after your changes. Lets see if it still works.
             }
         }
     }
@@ -25,8 +27,8 @@ struct PreviewView: View {
 struct Preview_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            
-            PreviewView(chapter: testChapter[0])
+
+            PreviewView(thisPreview: testPreview)
         }
     }
 }
