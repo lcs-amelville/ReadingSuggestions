@@ -48,7 +48,16 @@ class Book: Identifiable, ObservableObject, Decodable {
         
     }
     
-    
+    func encode(to encoder: Encoder) throws {
+        
+        var container = encoder.container(keyedBy: TaskCodingKeys.self)
+        
+        // Everything is encoded into String types
+               try container.encode(title, forKey: .title)
+                try container.encode(rating.rawValue, forKey: .rating)
+               try container.encode(description, forKey: .description)
+               try container.encode(imageName, forKey: .imageName)
+    }
     
     
 }
