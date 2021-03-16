@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RatingPicker: String {
+enum RatingPicker: String, Decodable {
     typealias RawValue = String
 
     case zero = "0"
@@ -17,3 +17,4 @@ enum RatingPicker: String {
     case four = "4"
     case five = "5"
 }
+let noSpecifiedRating = "None"

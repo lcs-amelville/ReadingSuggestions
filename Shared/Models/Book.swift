@@ -7,7 +7,15 @@
 
 import Foundation
 
-class Book: Identifiable, ObservableObject {
+enum TaskCodingKeys: CodingKey {
+    case title
+    case rating
+    case description
+    case imageName
+}
+
+
+class Book: Identifiable, ObservableObject, Decodable {
 
     var id = UUID()
     var title: String
@@ -24,8 +32,36 @@ class Book: Identifiable, ObservableObject {
         self.imageName = imageName
     }
     
+    required init(from decoder: Decoder) throws {
+        
+        let container = try decoder.container(keyedBy: TaskCodingKeys.self)
+        
+        
+        // Decode all the properties from JSON property into an instance of the String type
+        self.title = try container.decode(String.self, forKey: .title)
+        //
+        self.rating = try container.decode(RatingPicker.self, forKey: .rating)
+        //
+        self.description = try container.decode(String.self, forKey: .description)
+        //
+        self.imageName = try container.decode(String.self, forKey: .imageName)
+        
+    }
+    
+    
+    
+    
 }
 
+
+
+
+
+
+
+
+
+// Books already in the app.
 let testData = [
     
     Book (title: "A Court of Thorns and Roses",
