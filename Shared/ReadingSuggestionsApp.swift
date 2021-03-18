@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct ReadingSuggestionsApp: App {
     
-    @StateObject private var store = BookStore()
+//    @StateObject private var store = BookStore()
+    @StateObject private var store = testStore
     @StateObject private var chapter = PreviewStore()
     
     var body: some Scene {

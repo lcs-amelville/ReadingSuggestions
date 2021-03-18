@@ -37,47 +37,51 @@ class BookStore: ObservableObject {
             // Try to decode the items from JSON
             // Decodes an instance of the specified type
             // .self is required to reference the type objecct
-            // So by saying [Task].self we are saying "decode the data from readItems into a structure of type [Task]"
+            // So by saying [k].self we are saying "decode the data from readItems into a structure of type [Task]"
             if let decoded = try? decoder.decode([Book].self, from: readBooks) {
-                 self.books = decoded
-                } else {
-                    self.books = []
-                }
-                return
-                
+                self.books = decoded
             } else {
-                
-                // If nothing could be loaded from the app bundle, or data could not be decoded, show whatever reminders were passed in to the initializer
-                self.books = books
-                
+                self.books = []
             }
+            
+            // Debug: Appending the contents of the test data for testing.
+            self.books.append(contentsOf: books)
+            
+            return
+            
+        } else {
+            
+            // If nothing could be loaded from the app bundle, or data could not be decoded, show whatever reminders were passed in to the initializer
+            self.books = books
+            
         }
-
+    }
+    
     
     
     //FUNCTIONS.
-
-//    func filterRating (with RatingPicker: String) -> [Book] {
-//
-//        if RatingPicker == noSpecifiedRating {
-//
-//
-//            return books
-//
-//        } else {
-//
-//            var givenRating = RatingPicker.zero
-//
-//
-//            switch RatingPicker  {
-//            case RatingPicker.zero.rawValue:
-//                givenRating = RatingPicker.zero.rawValue
-//            case RatingPicker.one:
-//
-//                }
-//            }
-//        }
-    }
+    
+    //    func filterRating (with RatingPicker: String) -> [Book] {
+    //
+    //        if RatingPicker == noSpecifiedRating {
+    //
+    //
+    //            return books
+    //
+    //        } else {
+    //
+    //            var givenRating = RatingPicker.zero
+    //
+    //
+    //            switch RatingPicker  {
+    //            case RatingPicker.zero.rawValue:
+    //                givenRating = RatingPicker.zero.rawValue
+    //            case RatingPicker.one:
+    //
+    //                }
+    //            }
+    //        }
+}
 
 
 let testStore = BookStore(books: testData)
