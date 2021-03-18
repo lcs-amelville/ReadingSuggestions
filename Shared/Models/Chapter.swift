@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Chapter: Identifiable, ObservableObject {
+class Chapter: Identifiable, ObservableObject, Decodable {
     var idi: Int
     var preview: String
     

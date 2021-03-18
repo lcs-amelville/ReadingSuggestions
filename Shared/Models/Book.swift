@@ -15,7 +15,7 @@ enum TaskCodingKeys: CodingKey {
 }
 
 
-class Book: Identifiable, ObservableObject, Decodable {
+class Book: Identifiable, ObservableObject, Decodable, Encodable {
 
     var id = UUID()
     var title: String
