@@ -92,11 +92,6 @@ let testData = [
           rating: .three,
           description: "This book, while a good read is very depressing with heavy topics. While an exellent read for a fun books list it is definitly not in the top section of that list.",
           imageName: "educated"),
-    
-    Book (title: "",rating: .zero,description: "", imageName: ""),
-    Book (title: "",rating: .zero,description: "", imageName: ""),
-    Book (title: "",rating: .zero,description: "", imageName: ""),
-    Book (title: "",rating: .zero,description: "", imageName: ""),
 ]
 
 

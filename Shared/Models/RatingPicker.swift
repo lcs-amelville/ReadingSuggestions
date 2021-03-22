@@ -17,4 +17,5 @@ enum RatingPicker: String, Decodable {
     case four = "4"
     case five = "5"
 }
+
 let noSpecifiedRating = "None"

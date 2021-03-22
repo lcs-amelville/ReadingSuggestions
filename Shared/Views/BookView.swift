@@ -12,7 +12,32 @@ struct BookView: View {
     
     @ObservedObject var store: BookStore
     
+    @State private var rating = RatingPicker.zero
+    
+    @State private var selectedRatingLevel = noSpecifiedRating
+    
     var body: some View {
+        
+        VStack {
+            
+            Picker("Rating", selection: $rating) {
+                Text(selectedRatingLevel)
+                    .tag(selectedRatingLevel)
+                Text(RatingPicker.zero.rawValue)
+                    .tag(RatingPicker.zero)
+                Text(RatingPicker.one.rawValue)
+                    .tag(RatingPicker.one)
+                Text(RatingPicker.two.rawValue)
+                    .tag(RatingPicker.two)
+                Text(RatingPicker.three.rawValue)
+                    .tag(RatingPicker.three)
+                Text(RatingPicker.four.rawValue)
+                    .tag(RatingPicker.four)
+                Text(RatingPicker.five.rawValue)
+                    .tag(RatingPicker.five)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(.horizontal)
         
         List(store.books) { book in
                     BookCell(book: book)
@@ -23,7 +48,7 @@ struct BookView: View {
     
 }
 
-
+}
 struct BookView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {

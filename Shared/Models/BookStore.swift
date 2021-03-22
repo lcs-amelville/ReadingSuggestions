@@ -61,28 +61,44 @@ class BookStore: ObservableObject {
     
     //FUNCTIONS.
     
-    //    func filterRating (with RatingPicker: String) -> [Book] {
-    //
-    //        if RatingPicker == noSpecifiedRating {
-    //
-    //
-    //            return books
-    //
-    //        } else {
-    //
-    //            var givenRating = RatingPicker.zero
-    //
-    //
-    //            switch RatingPicker  {
-    //            case RatingPicker.zero.rawValue:
-    //                givenRating = RatingPicker.zero.rawValue
-    //            case RatingPicker.one:
-    //
-    //                }
-    //            }
-    //        }
+    func filterRating (with selectedRating: String) -> [Book] {
+        
+        if selectedRating == noSpecifiedRating {
+            
+            
+            return books
+            
+        } else {
+            
+            // Create an empty list of tasks that match the search term
+            var matchingBooks: [Book] = []
+            
+            // Translate the given priority level (as a string) back into an enumeration value
+            var givenRating = RatingPicker.zero.rawValue
+            switch selectedRating {
+            case RatingPicker.zero.rawValue:
+                givenRating = RatingPicker.zero.rawValue
+            case RatingPicker.one.rawValue:
+                givenRating = RatingPicker.one.rawValue
+            default:
+                break
+            }
+            // Iterate through all the tasks
+            for book in books {
+                
+                // ... but when a priority level is specified...
+                if book.rating.rawValue == givenRating {
+                    
+                    // ... only add tasks that match that priority level to the list that is returned
+                    matchingBooks.append(book)
+                    
+                }
+            }
+            // Return the list of matching tasks
+            return matchingBooks
+        }
+    }
 }
-
 
 let testStore = BookStore(books: testData)
 
