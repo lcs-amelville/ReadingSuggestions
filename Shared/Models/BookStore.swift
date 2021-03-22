@@ -31,7 +31,7 @@ class BookStore: ObservableObject {
     init (books: [Book] = []) {
         
         // Try to read the existing tasks from the app bundle
-        if let readBooks = UserDefaults.standard.data(forKey: "books") {
+        if let readBooks = UserDefaults.standard.data(forKey: "booksTwo") {
             
             let decoder = JSONDecoder()
             // Try to decode the items from JSON
@@ -45,7 +45,7 @@ class BookStore: ObservableObject {
             }
             
             // Debug: Appending the contents of the test data for testing.
-           // self.books.append(contentsOf: books)
+            // self.books.append(contentsOf: books)
             
             return
             
