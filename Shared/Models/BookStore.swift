@@ -70,7 +70,7 @@ class BookStore: ObservableObject {
             
         } else {
             
-            // Create an empty list of tasks that match the search term
+            // Create an empty list of books that match the search term
             var matchingBooks: [Book] = []
             
             // Translate the given priority level (as a string) back into an enumeration value

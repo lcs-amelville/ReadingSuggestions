@@ -22,28 +22,29 @@ struct BookView: View {
             
             Text("Book Rating")
             
-            Picker("Rating", selection: $rating) {
-                Text(selectedRatingLevel)
-                    .tag(selectedRatingLevel)
+            Picker("Rating", selection: $selectedRatingLevel) {
+                Text(noSpecifiedRating)
+                    .tag(noSpecifiedRating)
                 Text(RatingPicker.zero.rawValue)
-                    .tag(RatingPicker.zero)
+                    .tag(RatingPicker.zero.rawValue)
                 Text(RatingPicker.one.rawValue)
-                    .tag(RatingPicker.one)
+                    .tag(RatingPicker.one.rawValue)
                 Text(RatingPicker.two.rawValue)
-                    .tag(RatingPicker.two)
+                    .tag(RatingPicker.two.rawValue)
                 Text(RatingPicker.three.rawValue)
-                    .tag(RatingPicker.three)
+                    .tag(RatingPicker.three.rawValue)
                 Text(RatingPicker.four.rawValue)
-                    .tag(RatingPicker.four)
+                    .tag(RatingPicker.four.rawValue)
                 Text(RatingPicker.five.rawValue)
-                    .tag(RatingPicker.five)
+                    .tag(RatingPicker.five.rawValue)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal)
         
             
             
-        List(store.books) { book in
+            
+        List(store.filterRating(with: selectedRatingLevel)) { book in
                     BookCell(book: book)
         }
         
