@@ -20,6 +20,8 @@ struct BookView: View {
         
         VStack {
             
+            Text("Book Rating")
+            
             Picker("Rating", selection: $rating) {
                 Text(selectedRatingLevel)
                     .tag(selectedRatingLevel)
@@ -39,6 +41,8 @@ struct BookView: View {
             .pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal)
         
+            
+            
         List(store.books) { book in
                     BookCell(book: book)
         }

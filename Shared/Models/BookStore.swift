@@ -80,6 +80,14 @@ class BookStore: ObservableObject {
                 givenRating = RatingPicker.zero.rawValue
             case RatingPicker.one.rawValue:
                 givenRating = RatingPicker.one.rawValue
+            case RatingPicker.two.rawValue:
+                givenRating = RatingPicker.two.rawValue
+            case RatingPicker.three.rawValue:
+                givenRating = RatingPicker.three.rawValue
+            case RatingPicker.four.rawValue:
+                givenRating = RatingPicker.four.rawValue
+            case RatingPicker.five.rawValue:
+                givenRating = RatingPicker.five.rawValue
             default:
                 break
             }
