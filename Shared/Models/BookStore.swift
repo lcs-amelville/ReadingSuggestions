@@ -45,7 +45,7 @@ class BookStore: ObservableObject {
             }
             
             // Debug: Appending the contents of the test data for testing.
-            self.books.append(contentsOf: books)
+           // self.books.append(contentsOf: books)
             
             return
             
