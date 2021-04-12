@@ -2,7 +2,7 @@
 //  RatingPicker.swift
 //  ReadingSuggestions
 //
-//  Created by Melville, Aidan on 2021-03-10.
+//  Created on 2021-03-10.
 //
 
 import Foundation

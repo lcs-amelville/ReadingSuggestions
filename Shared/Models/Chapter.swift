@@ -2,7 +2,7 @@
 //  Chapter.swift
 //  ReadingSuggestions
 //
-//  Created by Melville, Aidan on 2021-03-09.
+//  Created on 2021-03-09.
 //
 
 import Foundation

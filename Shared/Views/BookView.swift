@@ -2,7 +2,7 @@
 //  BookView.swift
 //  ReadingSuggestions
 //
-//  Created by Melville, Aidan on 2021-01-28.
+//  Created on 2021-01-28.
 //
 
 import SwiftUI
